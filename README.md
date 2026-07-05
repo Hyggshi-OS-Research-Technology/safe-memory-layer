@@ -537,6 +537,42 @@ store.set("user:1", { id: "1", name: "Alice", email: "alice@example.com" });
 const user = store.get("user:1"); // Type: User | undefined
 ```
 
+## JavaScript Support
+
+The library works seamlessly with plain JavaScript (no TypeScript required). Since it's compiled to both ESM and CommonJS, you can use it in any JavaScript project.
+
+### ESM (Modern JavaScript)
+
+```javascript
+import { MemoryStore, WeakMemoryStore } from "safe-memory-layer";
+
+const cache = new MemoryStore();
+cache.set("key", "value", { ttl: 60000 });
+const value = cache.get("key");
+cache.dispose();
+```
+
+### CommonJS (Node.js)
+
+```javascript
+const { MemoryStore, WeakMemoryStore } = require("safe-memory-layer");
+
+const cache = new MemoryStore();
+cache.set("key", "value", { ttl: 60000 });
+const value = cache.get("key");
+cache.dispose();
+```
+
+### JavaScript Features
+
+- No TypeScript required
+- Works with ESM and CommonJS
+- Full API access (same as TypeScript)
+- No type annotations needed
+- Dynamic typing support
+
+See `examples/javascript-usage.js` for a complete JavaScript example.
+
 ## License
 
 MIT
@@ -566,3 +602,7 @@ npm test
 ### 1.1.2
 
 - support Electron desktop (Framework)
+
+### 1.2.2
+
+- support JS
