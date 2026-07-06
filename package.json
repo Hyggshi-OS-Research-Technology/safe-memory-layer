@@ -1,6 +1,6 @@
 {
   "name": "safe-memory-layer",
-  "version": "1.3.2",
+  "version": "1.3.4",
   "description": "Secure, lightweight, dependency-free in-memory storage with TTL support, automatic cleanup, and memory leak prevention for Node.js and browsers",
   "type": "module",
   "main": "./dist/index.cjs",

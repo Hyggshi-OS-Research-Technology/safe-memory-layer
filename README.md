@@ -749,3 +749,4 @@ const store = new MemoryStore({
 });
 ```
 - Electron Lazy Loading and Window Management
+
